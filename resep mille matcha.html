@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resep Harian FOOD!!</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="logo resep mknan.png" rel="icon">
+  <link href="logo resep mknan.png" rel="apple-touch-icon">
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+    header {
+        background-color: #ff6600;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        padding: 20px 0;
+    }
+    .main-content {
+        flex: 3;
+        margin: 0 10px;
+    }
+    .sidebar {
+        flex: 1;
+        margin: 0 10px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .news-card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 20px 0;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .news-card img {
+        width: 100%;
+        height: auto;
+    }
+    .news-card h2 {
+        padding: 10px;
+        margin: 0;
+        background: #ff6600;
+        color: white;
+        font-size: 1.5em;
+    }
+    .news-card  {
+        padding: 0 10px;
+        margin: 0;
+    }
+    .news-card .content {
+        padding: 10px;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+    .news-link {
+        display: block;
+        background: #ff6600;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 0 0 5px 5px;
+    }
+    .news-link:hover {
+        background: #ff4500;
+    }
+</style>
+</head>
+<body>
+  
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="logo resep mknan.png" sizes="32x32" />
+  <!-- Bootsratp CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<header>
+    <h1>Resep Harian FOOD!!</h1>
+</header>
+
+<body>
+  <!-- This is Bootsratp Nav bar -->
+  <nav id="navbar">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">News Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="web berita makanan pplg zizah,osa,fianka,vita.html"aria-current="page" onclick="getNews('all')">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"aria-expanded="false">
+                Category
+              </a>
+              <ul id="webList" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li onclick="sendCategory(this.id)" id="0">
+                  <a class="dropdown-item" href="category saraapan.html">Menu Sarapan</a>
+                </li>
+                <li onclick="sendCategory(this.id)" id="1">
+                  <a class="dropdown-item" href="Category makan siang.html">Menu Makan Siang</a>
+                </li>
+                <li onclick="sendCategory(this.id)" id="2">
+                  <a class="dropdown-item" href="category makan malam.html">Menu Makan Malam</a>
+                </li>
+                <li onclick="sendCategory(this.id)" id="3">
+                  <a class="dropdown-item" href="category dessert.html">Menu Dessert</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+              <div class="form-check form-switch">
+                <input type="checkbox" id="darkModeToggle">
+                <label class="form-check-label" for="darkModeToggle">
+                  <svg class="moon"  xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16"
+                    viewBox="0 0 512 512">
+                    <path fill="#fff"
+                      d="M268.279,496c-67.574,0-130.978-26.191-178.534-73.745S16,311.293,16,243.718A252.252,252.252,0,0,1,154.183,18.676a24.44,24.44,0,0,1,34.46,28.958,220.12,220.12,0,0,0,54.8,220.923A218.746,218.746,0,0,0,399.085,333.2h0a220.2,220.2,0,0,0,65.277-9.846,24.439,24.439,0,0,1,28.959,34.461A252.256,252.256,0,0,1,268.279,496ZM153.31,55.781A219.3,219.3,0,0,0,48,243.718C48,365.181,146.816,464,268.279,464a219.3,219.3,0,0,0,187.938-105.31,252.912,252.912,0,0,1-57.13,6.513h0a250.539,250.539,0,0,1-178.268-74.016,252.147,252.147,0,0,1-67.509-235.4Z"
+                      class="ci-primary"></path>
+                  </svg>
+                  <svg class="sun"  xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
+                    <path
+                      d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                      fill="#fff9e5"></path>
+                  </svg>
+                </label>
+        </div>
+      </div>
+    </nav>
+  </nav>
+  <div class="container">
+    <aside class="sidebar">
+        <h2>Kategori</h2>
+        <ul>
+            <li><a href="web berita makanan pplg zizah,osa,fianka,vita.html">Resep</a></li>
+            <li><a href="Tips Memasak.html">Tips Memasak</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="news-card">
+            <img src="matcha.jpg" alt="Gambar Berita 1" width="200" height="200">
+            <h2>Rahasia Resep Mile Crapes Matcha</h2>
+            <div class="content">
+                <p> <h1>Mille Crapes Matcha</h1>
+                    <h2>Bahan-bahan:</h2>
+                    <div class="ingredients">
+                        <ul>
+                            <li> 4 btr telur </li>
+                            <li> 120 gr gula pasir </li>
+                            <li> 1 sachet susu chocolatos matcha bubuk </li>
+                            <li> 200 gr tepung terigu </li>
+                            <li> 50 gr margarin lelehkan </li>
+                            <li> 600 ml susu uht coklat </li>
+                            <li> 200 gr whippy cream </li>
+                            <li>  400 gr air es </li>
+        
+                            <main class="container">
+                                <div class="recipe-card">
+                                    <h2>Alat-alat:</h2>
+                                    <div class="tools">
+                                        <ul>
+                                            <li>Wajan</li>
+                                            <li>Sutil</li>
+                                            <li>Piring saji</li>
+                                            <li>Mangkuk kecil untuk bumbu</li>
+                                        </ul>
+                                    </div>
+                                    <h2>Cara Pembuatan:</h2>
+                                    <div class="steps">
+                                        <ol>
+                                            <li>Dalam wadah masukkan telur,gula pasir,susu chocolatos Matcha,dan tepung terigu.taambahkan susu sedikit² sambil diaduk dg whisk.sampai adonan halus tidak ada yg bergerindil.atau juga bisa dg mixer.</li>
+                                            <li>Lalu tambakan margarin leleh.aduk sampai tercampur rata./li>
+                                            <li>Panaskan teflon oles dg sedikit minyak dg menggunakan tisu.lalu tuang satu sendok sayur lalu ratakan dg di angkat teflon lalu di putar.sampai tidak lengket lagi.berarti sdh matang.lakukan smp adonan habis.sisihkan</li>
+                                            <li>Dalam wadah masukkan whippy cream bubuk dan air es lalu mixer sampai lembut.lalu ambil satu kulit crepes, oles dg whippy cream lalu tumpuk lagi dg kulit crepes.lakukan sampai kulit crepes habis. hias sesuai selera. masukkan ke dlam kulkas sampai kokoh.klo tdk dimasukkan ke kulkas.susah di potong² nantinya.sajikan dingin.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </main>
+
+
+
+
+            </div>
+            <a href="category dessert.html" class="news-link">Kembali</a>
+        </div>
+
+        <!-- Tambahkan lebih banyak berita di sini -->
+    </main>
+
+    <aside class="sidebar">
+        <h2>Artikel Terpopuler</h2>
+        <ul>
+            <li><a href="Resep Cinamonrise.html">resep ayam suwir yang paling laris!</a></li>
+            <li><a href="resep mille matcha.html">Resep Mille Crepes Matcha Terenak</a></li>
+            <li><a href="Resep Minuman Segar dan manis.html">Resep Minuman Segar dan Manis</a></li>
+            <li><a href="artikel resep nasi goreng special.html">Resep Nasi Goreng Special</a></li>
+        </ul>
+    </aside>
+</div>
+<footer>
+  <p>&copy; 2024 Resep Harian FOOD!!</p>
+  <p>content with us</p>
+  <a href="https://wa.me/6281352596694"><img src="wa no bg.png" alt="wa " width="30" height="35"></a>
+  <a href="https://www.instagram.com/nzzuiev_?igsh=dXVsZGN1YzdyeG1l"><img src="ig.png" alt="ig " width="30" height="35"></a>
+ 
+</footer>
+
+<!-- Bootsratp js -->
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+  integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>
